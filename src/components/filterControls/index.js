@@ -14,7 +14,7 @@ const FilterControls = props => {
       .then(apiGenres => {
         setGenres([genres[0], ...apiGenres]);
       });
-  }, []);
+  });
 
   const handleChange = (e, type, value) => {
     e.preventDefault();
