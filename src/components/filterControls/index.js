@@ -9,7 +9,8 @@ const FilterControls = props => {
     getGenres().then(allGenres => {
       setGenres([genres[0], ...allGenres]);
     });
-  });
+    // eslint-disable-next-line
+  }, []);
 
 
   const handleChange = (e, type, value) => {
