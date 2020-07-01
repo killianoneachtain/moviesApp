@@ -9,6 +9,8 @@ import MovieReviewPage from "./pages/movieReviewPage"; // New Week 4
 import SiteHeader from './components/siteHeader'; // NEW Week 4 
 import MoviesContextProvider from "./contexts/moviesContext"; // New Week 5
 import GenresContextProvider from "./contexts/genresContext"; // New Week 5
+import AddMovieReviewPage from './pages/addMovieReviewPage'; // New Week 5
+
 
 const App = () => {
   return (
@@ -19,6 +21,7 @@ const App = () => {
             <MoviesContextProvider>
               <GenresContextProvider>
                 <Switch>
+                <Route exact path="/reviews/form" component={AddMovieReviewPage} />
                   <Route path="/reviews/:id" component={MovieReviewPage} />
                   <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
                   <Route path="/movies/:id" component={MoviePage} />
