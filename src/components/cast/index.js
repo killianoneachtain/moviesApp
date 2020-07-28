@@ -17,7 +17,7 @@ export default ({ movie}) => {
         <table className="table table-striped table-bordered table-hover">
         <thead>
           <tr>
-            <th scope="col">Charcter</th>
+            <th scope="col">Character</th>
             <th scope="col">Actor</th>
             <th scope="col">More Details</th>
           </tr>
@@ -25,14 +25,14 @@ export default ({ movie}) => {
         <tbody>
           {credits.map(r => {
               return (
-                <tr key={r.id}>
-                  <td>{r.character}</td>
-                    <td>{r.name}</td>
+                <tr key={r.cast.id}>
+                  <td>{r.cast.character}</td>
+                    <td>{r.cast.name}</td>
                   <td>
                     {" "}
                     <Link
                       to={{
-                        pathname: `/credits/${r.id}`,
+                        pathname: `/credits/${r.cast.id}`,
                         state: {
                           review: r,
                           movie: movie

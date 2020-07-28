@@ -4,7 +4,8 @@ import MovieDetails from "../components/movieDetails";
 import PageTemplate from "../components/templateMoviePage";
 import MovieReviews from "../components/movieReviews";
 import useMovie from "../hooks/useMovie";
-import CastCrew from "../components/castCrew";
+import CastCrew from "../components/cast";
+//import Crew from "../components/crew";
 
 const MoviePage = props => {
   const { id } = props.match.params;
