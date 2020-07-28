@@ -1,3 +1,4 @@
+
 import React,{useEffect,useState} from "react";
 import { Link } from "react-router-dom";
 import { getCastCrew } from "../../api/tmdb-api";
@@ -7,7 +8,7 @@ export default ({ movie}) => {
 
     useEffect(() => {
         getCastCrew(movie.id).then(credits => {
-            setCastCrew(credits);
+            setCastCrew(credits.cast);
         });
     },
     // eslint-disable-next-line
@@ -25,14 +26,14 @@ export default ({ movie}) => {
         <tbody>
           {credits.map(r => {
               return (
-                <tr key={r.cast.id}>
-                  <td>{r.cast.character}</td>
-                    <td>{r.cast.name}</td>
+                <tr key={r.id}>
+                  <td>{r.character}</td>
+                    <td>{r.name}</td>
                   <td>
                     {" "}
                     <Link
                       to={{
-                        pathname: `/credits/${r.cast.id}`,
+                        pathname: `/credits/${r.id}`,
                         state: {
                           review: r,
                           movie: movie

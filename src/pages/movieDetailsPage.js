@@ -5,7 +5,7 @@ import PageTemplate from "../components/templateMoviePage";
 import MovieReviews from "../components/movieReviews";
 import useMovie from "../hooks/useMovie";
 import CastCrew from "../components/cast";
-//import Crew from "../components/crew";
+import Crew from "../components/crew";
 
 const MoviePage = props => {
   const { id } = props.match.params;
@@ -21,10 +21,10 @@ const MoviePage = props => {
 
         <div className="row">
           <div className="col-12 ">
-            {!props.history.location.pathname.endsWith("/credits") ? (
+            {!props.history.location.pathname.endsWith("/castcredits") ? (
               <Link
                 className="btn btn-primary btn-block active"
-                to={`/movies/${id}/credits`}
+                to={`/movies/${id}/castcredits`}
               >
                 Show Cast
               </Link>
@@ -39,9 +39,35 @@ const MoviePage = props => {
           </div>
         </div>
         <Route
-          path={`/movies/:id/credits`}
+          path={`/movies/:id/castcredits`}
           render={props => <CastCrew movie={movie} {...props} />}
         />
+
+        <div className="row">
+          <div className="col-12 ">
+            {!props.history.location.pathname.endsWith("/crewcredits") ? (
+              <Link
+                className="btn btn-primary btn-block active"
+                to={`/movies/${id}/crewcredits`}
+              >
+                Show Crew
+              </Link>
+            ) : (
+              <Link
+                className="btn btn-primary btn-block active"
+                to={`/movies/${id}`}
+              >
+                Hide Crew 
+              </Link>
+            )}
+          </div>
+        </div>
+        <Route
+          path={`/movies/:id/crewcredits`}
+          render={props => <Crew movie={movie} {...props} />}
+        />
+
+
 
         <div className="row">
           <div className="col-12 ">
