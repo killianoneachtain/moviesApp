@@ -29,3 +29,43 @@ export const getMovies = () => {
       .then(res => res.json())
       .then(json => json.results);
   };
+
+  export const getCastCrew = id => {
+    return fetch(
+      `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_TMDB_KEY}`          
+    )
+    .then(res => res.json())
+      .then(json => json.cast);
+  };
+
+  export const getCrewInfo = id => {
+    return fetch(
+      `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
+    )
+    .then(res => res.json())
+    .then(json => json.crewInfo);
+  };
+
+  export const getRecommendations = id => {
+    return fetch(
+      `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
+    )
+    .then(res => res.json())
+    .then(json => json.recommendations);
+  };
+
+  export const getSimilar = id =>{
+    return fetch(
+      `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
+    )
+    .then(res => res.json())
+    .then(json => json.similar);
+};
+
+export const getUpcoming = id => {
+  return fetch(
+    `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
+  )
+  .then(res => res.json())
+  .then(json => json.upcoming);
+};
