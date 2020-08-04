@@ -7,11 +7,11 @@ const PersonHeader = ({ person }) => {
     <div className="row">
       <div className="col-6 offset-3">
         <h2>
-          {person.name}
-          {"  "}
-          <a href={person.homepage}>
-            <FontAwesomeIcon icon={["fas", "infocircle"]} size="2x" />
+           <a href={person.homepage}>
+            <FontAwesomeIcon icon={["fas", "info-circle"]} size="1x" />
           </a>
+          {"  "}   
+          {person.name}                
         </h2>
       </div>
     </div>
