@@ -33,14 +33,14 @@ export default ({ movie}) => {
                     {" "}
                     <Link
                       to={{
-                        pathname: `/credits/${r.id}`,
+                        pathname: `/person/${r.id}`,
                         state: {
                           review: r,
                           movie: movie
                         }
                       }}
                     >
-                      Full Review
+                      See Bio...
                     </Link>
                   </td>
                 </tr>

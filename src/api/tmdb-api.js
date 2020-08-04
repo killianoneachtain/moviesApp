@@ -34,16 +34,14 @@ export const getMovies = () => {
     return fetch(
       `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${process.env.REACT_APP_TMDB_KEY}`          
     )
-    .then(res => res.json())
-      .then(json => json);
+    .then(res => res.json());      
   };
 
-  export const getCrewInfo = id => {
+  export const getPerson = id => {
     return fetch(
-      `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
+      `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US`      
     )
-    .then(res => res.json())
-    .then(json => json.crewInfo);
+    .then(res => res.json());    
   };
 
   export const getRecommendations = id => {
