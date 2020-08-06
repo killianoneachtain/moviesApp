@@ -1,8 +1,7 @@
 import React from "react";
 import "./personDetails.css";
-//import personDetailsPage from "../../pages/personDetailsPage";
 
-export default ({ person }) => {
+export default ({ person, personMovieDetails }) => {
   var sex;
   if(person.gender === 2)
   { sex = "Male";}
@@ -16,18 +15,21 @@ export default ({ person }) => {
     <h6>Place of Birth: {person.place_of_birth}</h6>
     <h6>Gender: {sex}</h6>
     
-    <h8>Also Known as: {person.also_known_as[0]}</h8>
-      <h4>Biography</h4>
-      <p>{person.biography}</p>
-      
-      <ul className="list-group list-group-horizontal">        
+    <h6>Also Known as: {person.also_known_as[0]}</h6>
+    <ul className="list-group list-group-horizontal">        
         <li key="ruh" className="list-group-item list-group-item-dark">
           Known For
         </li>
         <li key="rut" className="list-group-item ">
           {person.known_for_department}
-        </li>   
-      </ul>    
+        </li>  
+        <br></br> 
+    </ul> 
+    <p></p>
+      <h4>Biography</h4>
+      <p>{person.biography}</p>
     </>
   );
+
+  
 };
