@@ -1,5 +1,6 @@
 
 import React,{useEffect,useState} from "react";
+import { Link } from "react-router-dom";
 import { getCastCrew } from "../../api/tmdb-api";
 
 export default ({ movie}) => {
@@ -28,7 +29,17 @@ export default ({ movie}) => {
                 <tr key={r.id}>
                   <td>{r.department}</td>
                     <td>{r.job}</td>
-                  <td>{r.name} </td>
+                    <Link
+                      to={{
+                        pathname: `/person/${r.id}`,
+                        state: {
+                          review: r,
+                          movie: movie
+                        }
+                      }}
+                    >
+                      {r.name}
+                    </Link>                  
                 </tr>
               );
             })}
