@@ -67,8 +67,6 @@ const MoviePage = props => {
           render={props => <Crew movie={movie} {...props} />}
         />
 
-
-
         <div className="row">
           <div className="col-12 ">
             {!props.history.location.pathname.endsWith("/reviews") ? (
