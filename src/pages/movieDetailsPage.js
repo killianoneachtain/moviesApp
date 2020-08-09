@@ -6,17 +6,21 @@ import MovieReviews from "../components/movieReviews";
 import useMovie from "../hooks/useMovie";
 import CastCrew from "../components/cast";
 import Crew from "../components/crew";
+import AddToFavoritesButton from '../components/buttons/addToFavorites'
 
 const MoviePage = props => {
   const { id } = props.match.params;
-  const [movie] = useMovie(id)  // NEW Week 4
+  const [movie] = useMovie(id)  // NEW Week 4  
   
   return (
     <>
     {movie ? (
       <>
-        <PageTemplate movie={movie}>
+        <PageTemplate 
+         action={movie => <AddToFavoritesButton movie={movie} /> } // Render prop => Add To Favourites Button Displayed
+         >
           <MovieDetails movie={movie} />
+         
         </PageTemplate>
 
         <div className="row">

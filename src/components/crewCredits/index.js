@@ -10,15 +10,7 @@ export default ({ person}) => {
         getPersonMovieCredits(person.id).then(credits => {
             setPersonCrewCredits(credits.crew);
         });
-    },
-    /*
-    const [credits, setCastCrew] = useState([]);
-
-    useEffect(() => {
-        getCastCrew(movie.id).then(credits => {
-            setCastCrew(credits.crew);
-        });
-    },*/
+    },    
     // eslint-disable-next-line
     []);
 
