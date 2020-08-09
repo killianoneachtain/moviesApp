@@ -10,6 +10,16 @@ export default ({ person}) => {
             setPersonMovieCredits(credits.cast);
         });
     },
+
+    /*export default ({ movie}) => {
+    const [credits, setCastCrew] = useState([]);
+
+    useEffect(() => {
+        getCastCrew(movie.id).then(credits => {
+            setCastCrew(credits.cast);
+        });
+    },*/
+
     // eslint-disable-next-line
     []);
 

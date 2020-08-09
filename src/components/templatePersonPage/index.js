@@ -12,7 +12,7 @@ const TemplatePersonPage = ({ person, children }) => {
             src={
               person.profile_path
                 ? `https://image.tmdb.org/t/p/w500/${person.profile_path}`
-                : "../public/film-poster-placeholder.png"
+                : "../film-poster-placeholder.png"
             }
             className="person"
             alt={person.name}
