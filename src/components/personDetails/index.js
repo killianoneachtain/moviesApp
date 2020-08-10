@@ -2,18 +2,14 @@ import React from "react";
 import "./personDetails.css";
 
 export default ({ person, personMovieDetails }) => {
-  var sex;
-  if(person.gender === 2)
-  { sex = "Male";}
-  if(person.gender === 1)
-  { sex = "Female";}
+
 
 
   return (
     <>
     <h6>Born : {person.birthday}</h6>    
     <h6>Place of Birth: {person.place_of_birth}</h6>
-    <h6>Gender: {sex}</h6>
+    <h6>Gender:  {person.gender === 2 ? 'Male' : 'Female'}</h6>
     
     <h6>Also Known as: {person.also_known_as[0]}</h6>
     <ul className="list-group list-group-horizontal">        

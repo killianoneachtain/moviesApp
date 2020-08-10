@@ -1,7 +1,7 @@
 import React, { useEffect, createContext, useReducer } from "react";
-import { getMovies } from "../api/tmdb-api";
+import { getUpcoming } from "../api/tmdb-api";
 
-export const MoviesContext = createContext(null);
+export const UpcomingMoviesContext = createContext(null);
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -12,52 +12,38 @@ const reducer = (state, action) => {
       };
 
     case "load-movies":
-      return { movies: [...action.payload.movies], favorites: [] }; 
-    
-    case "add-review":
-        return {
-          movies: [...state.movies],
-          favorites: [
-            ...state.favorites.filter((m) => m.id !== action.payload.movie.id),
-            { ...action.payload.movie, review: action.payload.review },
-          ],
-        };
+      return { movies: [...action.payload.movies], favorites: [] };  
+   
     default:
       return state;
   }
 };
 
-const MoviesContextProvider = (props) => {
+const UpcomingMoviesContextProvider = (props) => {
   const [state, dispatch] = useReducer(reducer, { movies: [], favorites: [] });
 
   const addToFavorites = (movieId) => {
     const index = state.movies.map((m) => m.id).indexOf(movieId);
     dispatch({ type: "add-favorite", payload: { movie: state.movies[index] } });
   };
-
-  const addReview = (movie, review) => {
-    dispatch({ type: "add-review", payload: { movie, review } });
-  }; 
-
+  
   useEffect(() => {
-    getMovies().then((movies) => {
+    getUpcoming().then((movies) => {
       dispatch({ type: "load-movies", payload: { movies } });
     });
-
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <MoviesContext.Provider
-      value={{
+    <UpcomingMoviesContext.Provider
+      value={{       
+        favorites: state.favorites, 
         movies: state.movies,
-        favorites: state.favorites,         
-        addToFavorites: addToFavorites,
-        addReview: addReview
+        addToFavorites: addToFavorites
       }}
     >
       {props.children}
-    </MoviesContext.Provider>
+    </UpcomingMoviesContext.Provider>
   );
 };
 
-export default MoviesContextProvider;
+export default UpcomingMoviesContextProvider;

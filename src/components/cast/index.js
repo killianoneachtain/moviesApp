@@ -16,19 +16,19 @@ export default ({ movie}) => {
 
     return (
         <table className="table table-striped table-bordered table-hover">
+          <caption>Cast List</caption>
         <thead>
           <tr>
             <th scope="col">Character</th>
-            <th scope="col">Actor</th>
-            <th scope="col">More Details</th>
+            <th scope="col">Actor</th>           
           </tr>
         </thead>
         <tbody>
           {credits.map(r => {
               return (
-                <tr key={r.id}>
+                <tr class='table-info' key={r.id}>
                   <td>{r.character}</td>
-                    <td>{r.name}</td>
+                    
                   <td>
                     {" "}
                     <Link
@@ -40,7 +40,7 @@ export default ({ movie}) => {
                         }
                       }}
                     >
-                      See Bio...
+                      {r.name}
                     </Link>
                   </td>
                 </tr>

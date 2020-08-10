@@ -5,6 +5,14 @@ export default ({ movie }) => {
   return (
     <>
       <h3>"<em>{movie.tagline}</em>"</h3>
+      <h3>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" 
+          aria-valuenow={movie.popularity} aria-valuemin="0" aria-valuemax="100">
+          </div>
+        </div>        
+      </h3>
+      <h5>Average Score: {movie.vote_average}</h5>
       <h4>Overview</h4>
       <p>{movie.overview}</p>
       <ul className="list-group list-group-horizontal">

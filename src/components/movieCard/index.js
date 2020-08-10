@@ -8,7 +8,7 @@ const MovieCard = ({movie, action}) => {
 
   return (
     <div className="col-sm-3">
-      <div className="card  bg-white">
+      <div className="card bg-white">
       <Link to={`/movies/${movie.id}`}>
         <img
           className="card-img-tag center "
@@ -16,7 +16,7 @@ const MovieCard = ({movie, action}) => {
           src={
             movie.poster_path
               ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
-              : "./film-poster-placeholder.png"
+              : "../film-poster-placeholder.png"
           }
         />
         </Link>
