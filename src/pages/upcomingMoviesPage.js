@@ -16,3 +16,4 @@ const MovieListPage = () => {
   );
 };
 export default MovieListPage;
+
