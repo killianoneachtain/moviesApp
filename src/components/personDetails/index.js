@@ -1,10 +1,7 @@
 import React from "react";
 import "./personDetails.css";
 
-export default ({ person, personMovieDetails }) => {
-
-
-
+export default ({ person }) => {
   return (
     <>
     <h6>Born : {person.birthday}</h6>    

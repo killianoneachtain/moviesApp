@@ -20,7 +20,7 @@ export default ({ movie}) => {
         <thead>
           <tr>
             <th scope="col">Character</th>
-            <th scope="col">Actor</th>           
+            <th scope="col">Actor</th>          
           </tr>
         </thead>
         <tbody>

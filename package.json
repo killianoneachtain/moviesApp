@@ -12,7 +12,7 @@
     "react-dom": "^16.11.0",
     "react-hook-form": "^3.29.4",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "3.4.0"
+    "react-scripts": "^3.4.3"
   },
   "scripts": {
     "storybook": "start-storybook -s ./public -p 6006 -c ./.storybook",
@@ -31,7 +31,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@storybook/addon-actions": "^5.3.1",
-    "@storybook/react": "^5.3.1"
+    "@storybook/addon-actions": "^6.0.16",
+    "@storybook/react": "^6.0.16"
   }
 }

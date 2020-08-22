@@ -10,16 +10,6 @@ export default ({ person}) => {
             setPersonMovieCredits(credits.cast);
         });
     },
-
-    /*export default ({ movie}) => {
-    const [credits, setCastCrew] = useState([]);
-
-    useEffect(() => {
-        getCastCrew(movie.id).then(credits => {
-            setCastCrew(credits.cast);
-        });
-    },*/
-
     // eslint-disable-next-line
     []);
 
@@ -30,7 +20,7 @@ export default ({ person}) => {
             <th scope="col">Movie title</th>
             <th scope="col">Character</th>
             <th scope="col">Vote Average</th>
-            <th scope="col"></th>
+            <th scope="col">Release Date</th>
           </tr>
         </thead>
         <tbody>
@@ -52,6 +42,7 @@ export default ({ person}) => {
                   </td>                  
                     <td>{r.character}</td>
                     <td>{r.vote_average}</td>
+                    <td>{r.release_date}</td>
                   
                 </tr>
               );

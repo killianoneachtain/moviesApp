@@ -11,7 +11,7 @@ const FavoriteMoviesPage = props => {
       movies={context.favorites}
       title={"Favorite Movies"}
       action={movie => <AddReviewButton movie={movie} />}
-    />
+    />    
   );
 };
 
