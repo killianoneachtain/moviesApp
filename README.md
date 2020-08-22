@@ -20,9 +20,10 @@ This 'Person Page' will display a list of Cast/Crew credits available and a link
 
 To run :
 1. Download/Clone the app from the 'GitHub' repository.
-2. Navigate to the folder using 'Terminal' / 'Cmd'. Type 'npm install' in the terminal to install node dependencies for the app.
-('npm update/audit fix' are optional if you would like to update nodes.)
-3. Once all packages are installed, enter 'npm start' in terminal. This will open a window in your default browser displaying the app running at 'localhost/3000'.
+2. Navigate to the folder using 'Terminal' / 'Cmd'. Type `npm install`, press enter/return in the terminal to install node dependencies for the app.
+(`npm update/audit fix` are optional if you would like to update nodes.)
+3. Once all packages are installed, enter `npm start` in terminal, and press enter/return. This will open a window in your default browser displaying the app running at 'localhost/3000'.
+4. To see Storybook, type `npm run storybook` and a new browser tab will open to display Storybook information.
 
 ## API Data Model.
 
@@ -211,9 +212,9 @@ Additional Endpoints Used :
 
 ### Component catalogue.
 
-....... Insert a screenshot from the Storybook UI showing your components' stories. [For projects that expanded the Movies app, hi-light stories relating to new/modified components - see example screenshot below] .......
+![Stories](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2020.34.06.png)
 
-![][stories]
+*Shows the Cast List for a movie. Clicking on the actor's name will take you to the actor's 'Profile Page'.*
 
 ### UI Design.
 
