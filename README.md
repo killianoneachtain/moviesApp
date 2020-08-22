@@ -214,7 +214,7 @@ Additional Endpoints Used :
 
 ![Stories](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2020.34.06.png)
 
-*Shows the Cast List for a movie. Clicking on the actor's name will take you to the actor's 'Profile Page'.*
+*Shows Storybook UI with additional stories highlighted.*
 
 ### UI Design.
 
