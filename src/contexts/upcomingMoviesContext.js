@@ -8,13 +8,21 @@ const reducer = (state, action) => {
     case "add-favorite":
       return {
         movies: state.movies.filter((m) => m.id !== action.payload.movie.id),
-        favorites: []
+        favorites: [...state.favorites, action.payload.movie],
       };
-
+      
     case "load-movies":
-      return { movies: [...action.payload.movies], 
-        favorites: [...state.favorites, action.payload.movie] };  
+      return { movies: [...action.payload.movies], favorites: [] };  
    
+    case "add-review":
+      return {
+        movies: [...state.movies],
+        favorites: [
+          ...state.favorites.filter((m) => m.id !== action.payload.movie.id),
+          { ...action.payload.movie, review: action.payload.review },
+        ],
+      };
+  
     default:
       return state;
   }
@@ -23,10 +31,15 @@ const reducer = (state, action) => {
 const UpcomingMoviesContextProvider = (props) => {
   const [state, dispatch] = useReducer(reducer, { movies: [], favorites: [] });
 
-  const addToFavorites = (movieId) => {
+  const addUpcomingToFavorites = (movieId) => {
     const index = state.movies.map((m) => m.id).indexOf(movieId);
     dispatch({ type: "add-favorite", payload: { movie: state.movies[index] } });
   };
+
+  const addReview = (movie, review) => {
+    dispatch({ type: "add-review", payload: { movie, review } });
+  }; 
+
 
   useEffect(() => {
     getUpcoming().then((movies) => {
@@ -39,7 +52,8 @@ const UpcomingMoviesContextProvider = (props) => {
       value={{ 
         movies: state.movies,      
         favorites: state.favorites,       
-        addToFavorites: addToFavorites
+        addToFavorites: addUpcomingToFavorites,
+        addReview: addReview
       }}
     >
       {props.children}

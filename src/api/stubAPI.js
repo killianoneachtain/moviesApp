@@ -5,7 +5,7 @@ class StubAPI {
 
     add(movie) {
         this.favoriteMovies.push(movie);
-    }
+    }  
 
     getAll() {
         return this.favoriteMovies;
