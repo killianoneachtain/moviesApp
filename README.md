@@ -255,7 +255,7 @@ Additional Endpoints Used :
 
 ### Component catalogue.
 
-![Stories](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2020.34.06.png)
+![Stories](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2022.57.35.png)
 
 *Shows Storybook UI with additional stories highlighted.*
 
@@ -298,24 +298,23 @@ Additional Endpoints Used :
 + /person/:id (public) - detail view of a particular person and its cast/crew credits.
 + /movies/:id/castcredits (public) - displays movies cast details with links to persons.
 + /movies/:id/crewcredits (public) - displays movies crew details with links to persons.
++ /movies/:id/similar (public) - displays movies that are similar to the current movie being viewed.
 + /person/:id/castcredits (public) - detail view of a particular person's cast credits, with link to the movie page.
 + /person/:id/crewcredits (public) - detail view of a particular person's crew credits, with link to the movie page.
 
 ## React feature set.
 
-..... Insert a bullet-point list of the React features used in your project, including one source code file references for each - see examples below ......
-
-+ useState and useEffect hooks - src/components/fileA.js
-+ useContext hook - src/components/fileb.js
-+ Extended Link - src/components/fileA.js
-+ Programmatic navigation - src/pages/fileC.js
-+ etc
-+ etc
-+ etc
++ useState and useEffect hooks - src/contexts/genresContext.js
++ useContext hook - src/pages/homePage.js
++ Extended Link - src/components/movieCard/index.js
++ Programmatic navigation - src/pages/movieDetailsPage.js
++ Routing -  src/pages/movieDetailsPage.js
++ Children passing - src/components/templateMoviePage/index.js 
++ Action - src/components/movieCard/index.js
++ createContext hook - src/contexts/moviesContext.js
++ useReducer hook - src/contexts/moviesContext.js
 
 ## Independent learning.
-
-. . . . . Briefly state the technologies/techniques used in your project codebase that were not covered in the lectures/labs. Provide source code filename references to support your assertions and include source material references (articles/blogs) ......... 
 
 
 [model]: ./data.jpg
