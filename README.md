@@ -255,7 +255,7 @@ Additional Endpoints Used :
 
 ### Component catalogue.
 
-![Stories](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2020.34.06.png)
+![Stories](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2022.57.35.png)
 
 *Shows Storybook UI with additional stories highlighted.*
 
