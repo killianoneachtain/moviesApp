@@ -13,6 +13,7 @@ This 'Person Page' will display a list of Cast/Crew credits available and a link
 -  View Persons Cast / Crew Credit History
 -  View Movies listed in person Crew/Credit History
 -  View List of Upcoming Movies
+-  View Similar Movies based on the current movie being viewed
 
 ## Setup requirements.
 
@@ -208,6 +209,48 @@ Additional Endpoints Used :
 }
 ```
 
+### 5.GET /movie/{movie_id}/similar - Get a list of similar movies.
+`https://api.themoviedb.org/3/movie/150540/similar?api_key={Key}&language=en-US&page=1`
+ *Returned JSON example*:
+ ``` 
+ {
+  "page": 1,
+  "results": [
+    {
+      "id": 12092,
+      "video": false,
+      "vote_count": 4161,
+      "vote_average": 7.1,
+      "title": "Alice in Wonderland",
+      "release_date": "1951-07-28",
+      "original_language": "en",
+      "original_title": "Alice in Wonderland",
+      "genre_ids": [
+        12,
+        16,
+        14,
+        10751
+      ],
+      "backdrop_path": "/b4yiLlIFuiULuuLTxT0Pt1QyT6J.jpg",
+      "adult": false,
+      "overview": "On a golden afternoon, young Alice follows a White Rabbit, who disappears down a nearby rabbit hole. Quickly following him, she tumbles into the burrow - and enters the merry, topsy-turvy world of Wonderland! Memorable songs and whimsical escapades highlight Alice's journey, which culminates in a madcap encounter with the Queen of Hearts - and her army of playing cards!",
+      "poster_path": "/AdwfqyNiH8UqeYKFYoiKhwTtjAb.jpg",
+      "popularity": 28.906
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/dVM0ZSzbMbz7b0LxrNRz1gdhcGM.jpg",
+      "genre_ids": [
+        10751,
+        35,
+        14
+        ]
+      ......
+    }
+  ]
+}
+```
+
 ## App Design.
 
 ### Component catalogue.
@@ -242,6 +285,10 @@ Additional Endpoints Used :
 ![Test Image 6](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2015.25.03.png)
 
 *Displays a list(20) of upcoming Movies. Clicking on the movie will bring you to the movie 'Details Page'.*
+
+![Test Image 7](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2022.40.07.png)
+
+*Displays a list of similar Movies to the movie currently viewing on 'Movie Details Page'.*
 
 ### Routing.
 
