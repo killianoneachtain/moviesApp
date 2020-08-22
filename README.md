@@ -28,7 +28,7 @@ To run :
 
 ## API Data Model.
 
-![API Model](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%23.41.50.png)
+![API Model](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2023.41.50.png)
 
 *Shows a Persons 'Cast' credit details. Clicking on the Movie Title will bring you to the movie 'Details Page'.*
 
