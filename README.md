@@ -242,18 +242,16 @@ Additional Endpoints Used :
 
 *Displays a list(20) of upcoming Movies. Clicking on the movie will bring you to the movie 'Details Page'.*
 
-![][view]
->Shows detailed information on a movie. Clicking the 'Show Reviews' button will display extracts from critic reviews.
-
 ### Routing.
 
 ...... Insert a list of the routes supported by your app and state the associated view. If relevant, specify which of the routes require authentication, i.e. protected/private. For projects that expanded the Movies Fan app, only new routes should be listed ......... 
 
-+ /blogs - displays all published blogs.
-+ /blogs/:id (private) - detail view of a particular blog.
-+ /blogs/:id/comments (private) - detail view of a particular blog and its comments.
-+ etc.
-+ etc.
++ /movies/upcoming (public) - displays 20 upcoming movies.
++ /person/:id (public) - detail view of a particular person and its cast/crew credits.
++ /movies/:id/castcredits (public) - displays movies cast details with links to persons.
++ /movies/:id/crewcredits (public) - displays movies crew details with links to persons.
++ /person/:id/castcredits (public) - detail view of a particular person's cast credits, with link to the movie page.
++ /person/:id/crewcredits (public) - detail view of a particular person's crew credits, with link to the movie page.
 
 ## React feature set.
 
