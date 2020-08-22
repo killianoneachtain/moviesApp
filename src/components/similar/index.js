@@ -19,8 +19,8 @@ export default ({ movie}) => {
         <thead>
           <tr>
             <th scope="col">Movie</th>
-            <th scope="col">Release Date</th>
             <th scope="col">Vote Average</th>
+            <th scope="col">Release Date</th>            
           </tr>
         </thead>
         <tbody>
