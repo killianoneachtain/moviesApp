@@ -30,7 +30,7 @@ import CastCredits from "../src/components/castCredits";
 import CrewCredits from "../src/components/crewCredits";
 import Cast from "../src/components/cast";
 import Crew from "../src/components/crew";
-import AddFavoriteButton from "../src/components/buttons/addToFavorites";
+//import AddFavoriteButton from "../src/components/buttons/addToFavorites";
 import { MemoryRouter } from "react-router";
 import GenresContextProvider from "../src/contexts/genresContext";
 import { action } from "@storybook/addon-actions";
