@@ -30,9 +30,9 @@ The app has been developed using [The Movie Database API](https://developers.the
 
 Additional Endpoints Used :
 
-1. GET /movie/{movie_id}/credits - Get the cast and crew for a movie.
+### 1. GET /movie/{movie_id}/credits - Get the cast and crew for a movie. 
 
- > **https://api.themoviedb.org/3/movie/${id}/credits?api_key=${Key}**
+  `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${Key}`
   
   *Returned JSON example*:
  ```
@@ -65,9 +65,9 @@ Additional Endpoints Used :
 ```
   
   
-2. GET /person/{person_id} - Get the primary person details by id.
+### 2. GET /person/{person_id} - Get the primary person details by id.
 
- > **https://api.themoviedb.org/3/person/${id}?api_key=${Key}&language=en-US**  
+`https://api.themoviedb.org/3/person/${id}?api_key=${Key}&language=en-US`
   
    *Returned JSON example*:
    ```
@@ -102,9 +102,9 @@ Additional Endpoints Used :
   "homepage": null
 }
 ```
-3. GET /person/{person_id}/movie_credits - Get the movie credits for a person.
+### 3. GET /person/{person_id}/movie_credits - Get the movie credits for a person.
 
->  **https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=${Key}&language=en-US**
+`https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=${Key}&language=en-US`
    
   *Returned JSON example*:
 ```
@@ -171,9 +171,8 @@ Additional Endpoints Used :
 }
 ```
 
-4. GET /movie/upcoming - Get a list of upcoming movies in theatres.
-
- > **https://api.themoviedb.org/3/movie/upcoming?api_key=${Key}&language=en-US&page=1**
+### 4. GET /movie/upcoming - Get a list of upcoming movies in theatres.
+`https://api.themoviedb.org/3/movie/upcoming?api_key=${Key}&language=en-US&page=1**`
   
   *Returned JSON example*:
  ``` 
