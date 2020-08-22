@@ -30,7 +30,7 @@ To run :
 
 ![API Model](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2023.41.50.png)
 
-*Shows a Persons 'Cast' credit details. Clicking on the Movie Title will bring you to the movie 'Details Page'.*
+*Shows the relationship between the app, API calls and how the information is linked and represented to the user.*
 
 The app has been developed using [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction).
 
