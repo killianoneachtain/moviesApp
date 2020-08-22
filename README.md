@@ -286,7 +286,7 @@ Additional Endpoints Used :
 
 *Displays a list(20) of upcoming Movies. Clicking on the movie will bring you to the movie 'Details Page'.*
 
-![Test Image 7](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2022.40.07.png)
+![Test Image 7](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2022.49.27.png)
 
 *Displays a list of similar Movies to the movie currently viewing on 'Movie Details Page'.*
 
