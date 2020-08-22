@@ -40,7 +40,6 @@ const UpcomingMoviesContextProvider = (props) => {
     dispatch({ type: "add-review", payload: { movie, review } });
   }; 
 
-
   useEffect(() => {
     getUpcoming().then((movies) => {
       dispatch({ type: "load-movies", payload: { movies } });
