@@ -30,7 +30,7 @@ import CastCredits from "../src/components/castCredits";
 import CrewCredits from "../src/components/crewCredits";
 import Cast from "../src/components/cast";
 import Crew from "../src/components/crew";
-//import AddFavoriteButton from "../src/components/buttons/addToFavorites";
+import Similar from "../src/components/similar";
 import { MemoryRouter } from "react-router";
 import GenresContextProvider from "../src/contexts/genresContext";
 import { action } from "@storybook/addon-actions";
@@ -267,4 +267,10 @@ storiesOf("Movie Details Page/MovieDetails/Crew", module)
   <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
 ))
 .add("default", () => <Crew movie={sampleMovie} />);
+
+storiesOf("Movie Details Page/MovieDetails/Similar", module)
+.addDecorator(story => (
+  <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
+))
+.add("default", () => <Similar movie={sampleMovie} />);
 
