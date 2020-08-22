@@ -217,7 +217,30 @@ Additional Endpoints Used :
 
 ### UI Design.
 
-...... Insert screenshots of the app's views (see example below) with appropriate captions (For extension to the Movies Fan App, only show the new/modified views) ........
+
+![Test Image 1](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2015.23.36.png)
+
+*Shows the Cast List for a movie. Clicking on the actor's name will take you to the actor's 'Profile Page'.*
+
+![Test Image 2](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2015.23.46.png)
+
+*Shows the Crew List for a movie. Clicking on the crew-member's name will take you to the crew-member's 'Profile Page'.*
+
+![Test Image 3](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2015.24.14.png)
+
+*Shows a Persons biography details. Displayed below are the movies the person has 'Cast' or 'Crew' credits for.*
+
+![Test Image 4](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2015.24.26.png)
+
+*Shows a Persons 'Cast' credit details. Clicking on the Movie Title will bring you to the movie 'Details Page'.*
+
+![Test Image 5](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2015.24.36.png)
+
+*Shows a Persons 'Crew' credit details. Clicking on the Movie Title will bring you to the movie 'Details Page'.*
+
+![Test Image 6](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-22%20at%2015.25.03.png)
+
+*Displays a list(20) of upcoming Movies. Clicking on the movie will bring you to the movie 'Details Page'.*
 
 ![][view]
 >Shows detailed information on a movie. Clicking the 'Show Reviews' button will display extracts from critic reviews.
