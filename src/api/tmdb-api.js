@@ -1,7 +1,7 @@
 export const getMovies = () => {
     var fetch1 = 
     fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_adult=false&page=1`
+      `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_adult=false&page=4`
     )
       .then(res => res.json())
       .then(json => json.results);
@@ -11,9 +11,9 @@ export const getMovies = () => {
         `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_adult=false&page=2`
       )
         .then(res => res.json())
-        .then(json => json.results);      */
-        
-        return fetch1;
+        .then(json => json.results); */
+   
+    return fetch1;
   };
   
   export const getMovie = id => {
@@ -74,7 +74,7 @@ export const getMovies = () => {
       `https://api.themoviedb.org/3/movie/${id}/similar?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1`
     )
     .then(res => res.json())
-    .then(json => json.similar);
+    .then(json => json.results);
 };
 
 export const getUpcoming = id => {

@@ -6,10 +6,11 @@ import MovieReviews from "../components/movieReviews";
 import useMovie from "../hooks/useMovie";
 import CastCrew from "../components/cast";
 import Crew from "../components/crew";
+import Similar from "../components/similar";
 
 const MoviePage = props => {
   const { id } = props.match.params;
-  const [movie] = useMovie(id)  // NEW Week 4
+  const [movie] = useMovie(id);
   
   return (
     <>
@@ -89,6 +90,30 @@ const MoviePage = props => {
         <Route
           path={`/movies/:id/reviews`}
           render={props => <MovieReviews movie={movie} {...props} />}
+        />
+
+        <div className="row">
+          <div className="col-12 ">
+            {!props.history.location.pathname.endsWith("/similar") ? (
+              <Link
+                className="btn btn-primary btn-block active"
+                to={`/movies/${id}/similar`}
+              >
+                Show Similar Movies
+              </Link>
+            ) : (
+              <Link
+                className="btn btn-primary btn-block active"
+                to={`/movies/${id}`}
+              >
+                Hide Similar Movies 
+              </Link>
+            )}
+          </div>
+        </div>
+        <Route
+          path={`/movies/:id/similar`}
+          render={props => <Similar movie={movie} {...props} />}
         />
       </>
     ) : (

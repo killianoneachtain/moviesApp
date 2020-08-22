@@ -6,7 +6,7 @@ const AddUpcomingToFavoriteButton = ({ movie }) => {
 
   const handleAddToFavorite = e => {
     e.preventDefault();
-    context.addToUpcomingFavorites(movie.id);
+    context.addToFavorites(movie.id);
   };
   return (
     <button
