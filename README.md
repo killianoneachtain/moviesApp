@@ -319,8 +319,3 @@ Additional Endpoints Used :
 + useReducer hook - src/contexts/moviesContext.js
 
 ## Independent learning.
-
-
-[model]: ./data.jpg
-[view]: ./view.png
-[stories]: ./storybook.png

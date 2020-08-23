@@ -16,6 +16,11 @@ const PersonPage = props => {
     <>
     { person && personMovieCredits ? (
       <>
+      <html>
+          <head>
+            <title>{person.name} Biography</title>
+          </head>
+          <body>
         <PageTemplate person={person}>
           <PersonDetails person={person} />
         </PageTemplate>
@@ -63,6 +68,8 @@ const PersonPage = props => {
             )}
           </div>
         </div>
+        </body>
+        </html>
         <Route
           path={`/person/:id/crewcredits`}
           render={props => <Crewcredits person={personMovieCredits} {...props} />}

@@ -7,11 +7,18 @@ import {UpcomingMoviesContext} from '../contexts/upcomingMoviesContext';
 const FavoriteMoviesPage = props => {
   const context = useContext(MoviesContext,UpcomingMoviesContext);
   return (
+    <html>
+    <head>
+      <title>Favorites</title>
+    </head>
+    <body>
     <MovieListPageTemplate
       movies={context.favorites}
       title={"Favorite Movies"}
       action={movie => <AddReviewButton movie={movie} />}
-    />    
+    />  
+    </body>
+  </html>  
   );
 };
 

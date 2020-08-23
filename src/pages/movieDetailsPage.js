@@ -16,6 +16,11 @@ const MoviePage = props => {
     <>
     {movie ? (
       <>
+        <html>
+          <head>
+            <title>{movie.title}</title>
+          </head>
+          <body>
         <PageTemplate movie={movie}>
           <MovieDetails movie={movie} />
         </PageTemplate>
@@ -110,7 +115,8 @@ const MoviePage = props => {
               </Link>
             )}
           </div>
-        </div>
+        </div></body>
+        </html>
         <Route
           path={`/movies/:id/similar`}
           render={props => <Similar movie={movie} {...props} />}

@@ -8,11 +8,17 @@ const MovieListPage = () => {
   const context = useContext(UpcomingMoviesContext);
 
   return (
+    <html>
+    <head>
+      <title>Upcoming Movies</title>
+    </head>
+    <body>
       <PageTemplate 
         title='Upcoming Movies'
         movies={context.movies}
   action={movie => <AddUpcomingToFavoritesButton movie={movie} /> } // Render prop => Add To Favourites Button Displayed
-      />
+      /></body>
+  </html>
   );
 };
 export default MovieListPage;
