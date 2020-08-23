@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LoginButton from "../buttons/login";
 import "../../globals/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./siteHeader.css";
@@ -30,6 +31,11 @@ const SiteHeader = () => {
           <li className="nav-item">
             <Link className="nav-link text-white" to="/">
               Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link text-white" to="/login">
+              <LoginButton />
             </Link>
           </li>
           <li className="nav-item">
