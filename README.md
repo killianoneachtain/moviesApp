@@ -294,23 +294,9 @@ Additional Endpoints Used :
 
 *Displays a list of similar Movies to the movie currently viewing on 'Movie Details Page'.*
 
-![Test Image 8](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-25%20at%2018.53.19.png)
-
-*Displays the 'Auth0' login modal.*
-
-![Test Image 9](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-25%20at%2018.53.40.png)
-
-*Displays the current users name and email. Details obtained using the Auth0 React SDK from '@auth0/auth0-react'.*
-
-![Test Image 10](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-25%20at%2018.53.49.png)
-
-*Displays the no users name and email, as there is no user logged in. Details obtained using the Auth0 React SDK from '@auth0/auth0-react'.*
-
-![Test Image 11](https://github.com/killianoneachtain/moviesApp/blob/master/Screenshot%202020-08-25%20at%2019.01.46.png)
-
-*Displays the Site Header with links to 'Login', 'Logout' and 'Profile'.*
-
 ### Routing.
+
+...... Insert a list of the routes supported by your app and state the associated view. If relevant, specify which of the routes require authentication, i.e. protected/private. For projects that expanded the Movies Fan app, only new routes should be listed ......... 
 
 + /movies/upcoming (public) - displays 20 upcoming movies.
 + /person/:id (public) - detail view of a particular person and its cast/crew credits.
@@ -319,7 +305,6 @@ Additional Endpoints Used :
 + /movies/:id/similar (public) - displays movies that are similar to the current movie being viewed.
 + /person/:id/castcredits (public) - detail view of a particular person's cast credits, with link to the movie page.
 + /person/:id/crewcredits (public) - detail view of a particular person's crew credits, with link to the movie page.
-+ /profile (public) - will display username and email of logged in user(if any).
 
 ## React feature set.
 
@@ -334,5 +319,3 @@ Additional Endpoints Used :
 + useReducer hook - src/contexts/moviesContext.js
 
 ## Independent learning.
-+ Use of 'Auth0' for log in. This allows users to login using a pre-existing 'Google' login, or create a profile . All information on setting up of functionality is from [Auth0](https://auth0.com). Once an 'App' is registered with the site, there are tutorials on how to add the functionality to your app, so that it uses 'Auth0' correctly. 
-The was also a Node installed '@auth0/auth0-react'. This is used to be the interface between my App and 'Auth0' functionality.
