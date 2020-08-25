@@ -16,13 +16,12 @@ import MoviesContextProvider from "./contexts/moviesContext";
 import GenresContextProvider from "./contexts/genresContext"; 
 import UpcomingMoviesContextProvider from "./contexts/upcomingMoviesContext"; 
 
-
 const App = () => {
   return (    
     <BrowserRouter>
     <Auth0Provider
         domain="dev-qb0ckde9.us.auth0.com"
-        clientId="QxzS75tUvwiAS7NRG313JQYHNMnZnkcL"
+        clientId="swmPsHx297SnEltxsW3Nuiw0ZEa4g0BK"
         redirectUri={window.location.origin}>
       <div className="jumbotron">
         <SiteHeader />      
