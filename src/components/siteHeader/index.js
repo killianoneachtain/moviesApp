@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import LoginButton from "../buttons/login";
+import LogoutButton from "../buttons/logout";
 import "../../globals/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./siteHeader.css";
 
 const SiteHeader = () => {
-  return (
+
+  return (   
     <nav className="navbar  navbar-light fixed-top  bg-dark ">
       <nav className="navbar-brand text-white">
         <Link className=" text-white" to="/">
@@ -19,7 +22,7 @@ const SiteHeader = () => {
         size="3x"
       />
       <span className="navbar-text text-light">
-        For the movie enthusiast !!
+        Welcome to Movies!
       </span>
       <FontAwesomeIcon
         className="navbar-text text-light"
@@ -39,6 +42,17 @@ const SiteHeader = () => {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link text-white" to="/login">
+              <LogoutButton />
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link text-white" to="/profile">
+              Profile
+            </Link>
+          </li>
+
+          <li className="nav-item">
             <Link className="nav-link text-white" to="/movies/favorites">
               Favorites
             </Link>
@@ -50,7 +64,7 @@ const SiteHeader = () => {
           </li>
         </ul>
       </nav>
-    </nav>
+    </nav>    
   );
 };
 

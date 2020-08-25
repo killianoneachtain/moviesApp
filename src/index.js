@@ -11,14 +11,14 @@ import MovieReviewPage from "./pages/movieReviewPage";
 import UpcomingMoviesPage from "./pages/upcomingMoviesPage";
 import AddMovieReviewPage from './pages/addMovieReviewPage'; 
 import PersonPage from './pages/personDetailsPage';
+import Profile from "./profile"
 import MoviesContextProvider from "./contexts/moviesContext"; 
 import GenresContextProvider from "./contexts/genresContext"; 
 import UpcomingMoviesContextProvider from "./contexts/upcomingMoviesContext"; 
 
 
 const App = () => {
-  return (
-    
+  return (    
     <BrowserRouter>
     <Auth0Provider
         domain="dev-qb0ckde9.us.auth0.com"
@@ -37,6 +37,7 @@ const App = () => {
                       <Route exact path="/movies/upcoming" component={UpcomingMoviesPage} />  
                       <Route path="/movies/:id" component={MoviePage} />
                       <Route path="/person/:id" component={PersonPage} />
+                      <Route path="/profile" component={Profile} />
                       <Route path="/" component={HomePage} />          
                      
                       <Redirect from="*" to="/" />
@@ -47,7 +48,7 @@ const App = () => {
         </div>
       </div>
       </Auth0Provider>
-    </BrowserRouter>
+    </BrowserRouter>  
   );
 };
 
