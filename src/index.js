@@ -22,7 +22,7 @@ const App = () => {
     <BrowserRouter>
     <Auth0Provider
         domain="dev-qb0ckde9.us.auth0.com"
-        clientId="swmPsHx297SnEltxsW3Nuiw0ZEa4g0BK"
+        clientId="QxzS75tUvwiAS7NRG313JQYHNMnZnkcL"
         redirectUri={window.location.origin}>
       <div className="jumbotron">
         <SiteHeader />      
